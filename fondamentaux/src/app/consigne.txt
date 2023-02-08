@@ -1,0 +1,6 @@
+Authors-App:
+
+    Créer un composant authors:
+        Il affiche une liste d'auteur ( au moins 3 )
+    Les données doivent provenir d'un service
+   

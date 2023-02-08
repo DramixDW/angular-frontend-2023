@@ -5,7 +5,7 @@
     <!-- Obligé let, si on met const, ça plante.
          var, je sais pas mais on considère 
          que ça n'existe pas -->
-    <li *ngFor="let movie of movies">
+    <li *ngFor="let movie of movies" class="mauve">
         {{ movie.title }}
         <p>
             {{ movie.description }}
