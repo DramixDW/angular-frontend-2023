@@ -1,0 +1,4 @@
+Créer un composant favorite
+    Par défaut, il va afficher ☆.
+    quand on clique dessus, ☆ devient ★
+

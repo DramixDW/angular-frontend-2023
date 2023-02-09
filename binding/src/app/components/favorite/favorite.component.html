@@ -1,0 +1,9 @@
+<p (click)="toggleIsFavorite()">{{ star }}</p>
+
+<!--
+    Ici, on écrit directement le contenu de la fonction lié au click. Comme si on lui avait
+    passé une fonction anonyme qui n'éxecute que cette ligne là. 
+
+    La valeur de notre innerHTML dépendra d'une ternaire renvoyant ☆ ou ★ selon notre variable
+-->
+<p (click)='isEmpty = !isEmpty' [innerHTML] = "isEmpty ? '☆' : '★'"  ></p>
