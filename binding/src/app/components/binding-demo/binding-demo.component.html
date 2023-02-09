@@ -1,0 +1,20 @@
+<input type="text" [disabled]="isNotAllowedToWrite" (keyup.enter)="changeUsername(usernameInput)" #usernameInput />
+<p>
+    Binding à deux sens
+</p>
+<input type="text" [disabled]="isNotAllowedToWrite" [(ngModel)]="username"/>
+
+<p [class.premium]="isPremium" class="bidon" [style.backgroundColor]="isPremium ? 'lavender' : 'none' ">
+    {{username}}
+</p>
+
+<p [ngClass]="{
+    premium: isPremium,
+    bidon: isPremium
+}" [ngStyle]="{
+    border: isPremium ? '1px solid purple' : 'none',
+    fontSize: isPremium ? '32px' : '1em' 
+}">
+    Respectez les loutres svp.
+    Le reste c'est pas grave.
+</p>
