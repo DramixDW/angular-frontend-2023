@@ -1,0 +1,59 @@
+<!-- 
+  lorsque la condition lié à notre ngIf renvoie faux,
+  l'html n'apparaît pas sur la page.
+ -->
+<div *ngIf="false">
+  Ce texte est caché à cause d'une condition
+</div>
+
+<div *ngIf="true">
+  Ce texte n'est pas caché car ma condition est vrai
+</div>
+
+<ul>
+  <!-- Pour chaque élément dans mon tableau
+       colors, on vient créer un élement <li>
+       dans lequel on affiche l'élément
+       du tableau. -->
+  <li *ngFor="let color of colors; index as i; even as isEven" [ngStyle]="{
+    color: colors[i]
+  }">
+      {{ color }}
+      <p *ngIf="isEven">
+        Cette couleur se trouve à un index pair
+      </p>
+  </li>
+</ul>
+
+<!-- le case de notre switch, se choisira
+     par rapport, à la valeur de la propriété 
+     viewmode -->
+<div [ngSwitch]="viewmode">
+  <!-- Pour le cas où viewmode est égal à 'list',
+       On affichera le paragraphe 
+   -->
+  <p *ngSwitchCase="'list'">
+    Vue liste
+  </p>
+  <p *ngSwitchCase="'kanban'">
+    Vue Kanban
+  </p>
+  <p *ngSwitchDefault>
+    Vue Cheh
+  </p>
+</div>
+<button (click)="viewmode = 'list'">LIST</button>
+<button (click)="viewmode = 'kanban'">KANBAN</button>
+
+{{ "mArIO" | lowercase | uppercase}}
+{{ "42" | currency : 'EUR'}}
+{{ "la loutre de jemappes" | spongebob : 'Imaginons': 'Que': 42 }}
+
+
+
+
+
+
+
+
+
