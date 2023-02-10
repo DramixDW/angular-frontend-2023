@@ -1,8 +1,30 @@
+<app-zippy title="Ma collection de loutre" manager="Romain" [isContentVisible]="true" [clickCount]="clickCountPerAnimal.otter" (titleClicked)="updateClickCount('otter')" >
+    <ng-container>
+        <p>
+            La loutre de chantier
+        </p>
+        <p>
+            La loutre clean code
+        </p>
+        <button>
+            Abonnez vous aux loutres
+        </button>
+    </ng-container>
+</app-zippy>
+<app-zippy title="Ma collection de bébé chauve-souris" manager="Cristophe" [clickCount]="clickCountPerAnimal.bat" (titleClicked)="updateClickCount('bat')">
+    <ng-container>
+        <p>
+            coucou
+        </p>
+    </ng-container>
+</app-zippy>
+
 <app-post-card postTitle="Mon nouveau title" (clickTitle)="handleClickTitle($event)">
     <ng-container class="content">
         <span>Mon contenu magique</span>
     </ng-container>
 </app-post-card>
+
 
 <ng-template #coffee>
     <pre>

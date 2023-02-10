@@ -1,0 +1,3 @@
+Créer un composant zippy:
+    Cela sera un composant avec un titre et un contenu
+    (pouvant être de l'html). Par défaut, le contenu est caché mais il s'affiche lorsqu'on clique sur le titre
